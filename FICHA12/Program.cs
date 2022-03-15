@@ -1,4 +1,9 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿using FICHA12;
+using FICHA12.Data;
+using FICHA12.Models;
+using FICHA12.Services;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
@@ -6,6 +11,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<LibraryContext>();
+builder.Services.AddScoped<IBookService, BookService>();
+
+
 
 var app = builder.Build();
 
@@ -21,6 +31,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.CreateDbIfNotExists();
 
 app.Run();
 
