@@ -1,37 +1,30 @@
 ﻿<Properties StartupConfiguration="{4D3DE405-AED8-47E0-BE72-EE193D41E408}|Default">
+  <MonoDevelop.Ide.ItemProperties.FICHA12 PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.FICHA12 PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FICHA12/Controllers/BooksController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FICHA12/Models/Book.cs">
     <Files>
-      <File FileName="FICHA12/Models/Publisher.cs" Line="16" Column="1" IsPinned="True" />
-      <File FileName="FICHA12/Models/LibraryContext.cs" Line="16" Column="99" IsPinned="True" />
-      <File FileName="FICHA12/Services/BookService.cs" Line="27" Column="23" />
-      <File FileName="FICHA12/Controllers/BooksController.cs" Line="66" Column="16" />
-      <File FileName="FICHA12/Data/LibraryDBInitializer.cs" Line="30" Column="26" />
-      <File FileName="FICHA12/Program.cs" Line="3" Column="1" />
-      <File FileName="FICHA12/Services/IBookService.cs" Line="18" Column="3" />
-      <File FileName="FICHA12/Models/Book.cs" Line="14" Column="3" />
+      <File FileName="FICHA12/Models/Publisher.cs" Line="12" Column="1" IsPinned="True" />
+      <File FileName="FICHA12/Models/LibraryContext.cs" Line="19" Column="33" IsPinned="True" />
+      <File FileName="FICHA12/Services/BookService.cs" Line="75" Column="10" />
+      <File FileName="FICHA12/Controllers/BooksController.cs" Line="70" Column="44" />
+      <File FileName="FICHA12/Data/LibraryDBInitializer.cs" Line="19" Column="1" />
+      <File FileName="FICHA12/Program.cs" Line="26" Column="24" />
+      <File FileName="FICHA12/Services/IBookService.cs" Line="9" Column="24" />
+      <File FileName="FICHA12/Models/Book.cs" Line="18" Column="1" />
       <File FileName="FICHA12/Properties/launchSettings.json" Line="1" Column="1" />
-      <File FileName="FICHA12/Data/LibraryExtension.cs" Line="21" Column="56" />
+      <File FileName="FICHA12/Data/LibraryExtension.cs" Line="11" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="FICHA12" expanded="True">
+          <Node name="FICHA12" expanded="True" selected="True">
             <Node name="FICHA12" expanded="True">
-              <Node name="Dependencies" expanded="True" />
-              <Node name="Controllers" expanded="True">
-                <Node name="BooksController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Models" expanded="True" />
-              <Node name="Properties" expanded="True" />
-              <Node name="Services" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -41,4 +34,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

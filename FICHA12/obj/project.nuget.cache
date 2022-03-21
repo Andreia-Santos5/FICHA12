@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UO3vS3vlGKgy5SltSNAbBTPf5zX5tUYRMZL1Qw6mR5+Q0JPgJdzE7049WcBinz8BIBWfYhtyStiang4Y2ZkL8Q==",
+  "dgSpecHash": "RrAcNzRJVd9DwuKx/HNf4zR9vOUYN6qR/KOi+AaIOMAxHgo38QsbZ0fxieR1yvkctkXiEDa7SuPtzZRMc8StWQ==",
   "success": true,
   "projectFilePath": "/Users/andreiasantos/Projects/FICHA12/FICHA12/FICHA12.csproj",
   "expectedPackageFiles": [
@@ -56,10 +56,10 @@
     "/Users/andreiasantos/.nuget/packages/mysql.entityframeworkcore/6.0.0/mysql.entityframeworkcore.6.0.0.nupkg.sha512",
     "/Users/andreiasantos/.nuget/packages/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512",
     "/Users/andreiasantos/.nuget/packages/runtime.native.system/4.0.0/runtime.native.system.4.0.0.nupkg.sha512",
-    "/Users/andreiasantos/.nuget/packages/swashbuckle.aspnetcore/6.2.3/swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
-    "/Users/andreiasantos/.nuget/packages/swashbuckle.aspnetcore.swagger/6.2.3/swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
-    "/Users/andreiasantos/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.2.3/swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
-    "/Users/andreiasantos/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.2.3/swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512",
+    "/Users/andreiasantos/.nuget/packages/swashbuckle.aspnetcore/6.3.0/swashbuckle.aspnetcore.6.3.0.nupkg.sha512",
+    "/Users/andreiasantos/.nuget/packages/swashbuckle.aspnetcore.swagger/6.3.0/swashbuckle.aspnetcore.swagger.6.3.0.nupkg.sha512",
+    "/Users/andreiasantos/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.3.0/swashbuckle.aspnetcore.swaggergen.6.3.0.nupkg.sha512",
+    "/Users/andreiasantos/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.3.0/swashbuckle.aspnetcore.swaggerui.6.3.0.nupkg.sha512",
     "/Users/andreiasantos/.nuget/packages/system.appcontext/4.1.0/system.appcontext.4.1.0.nupkg.sha512",
     "/Users/andreiasantos/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/andreiasantos/.nuget/packages/system.collections/4.0.11/system.collections.4.0.11.nupkg.sha512",

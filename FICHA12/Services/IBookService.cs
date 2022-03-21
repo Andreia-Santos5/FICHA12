@@ -12,7 +12,7 @@ namespace FICHA12
 		public abstract void DeleteByISBN(string isbn);
 		public abstract void Update(string isbn, Book book);
 		public abstract void UpdatePublisher(string isbn, int publisherId);
-		public abstract void Download();
+		
 		
 
 

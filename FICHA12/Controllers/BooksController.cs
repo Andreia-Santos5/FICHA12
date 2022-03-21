@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using FICHA12.Models;
+﻿using FICHA12.Models;
+using FICHA12.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 namespace FICHA12.Controllers
 {
     [Route("api/[controller]")]
@@ -24,15 +22,14 @@ namespace FICHA12.Controllers
 			return service.GetAll();
 		}
 
-        // GET api/values/5
-        [HttpGet("{isbn}")]
-        public IActionResult Get (string isbn)
+        // GET api/<BooksController>/5
+        [HttpGet("{isbn}", Name = "GetByISBN")]
+        public IActionResult Get(string isbn)
         {
             Book? book = service.GetByISBN(isbn);
             if (book == null)
             {
                 return NotFound();
-
             }
             else
             {
@@ -40,7 +37,7 @@ namespace FICHA12.Controllers
             }
         }
 
-        [HttpGet("{author}")]
+        [HttpGet("{author}", Name ="GetByAuthor")]
         public IActionResult GetAuthor(string author)
         {
             Book? book = service.GetByAuthor(author);
@@ -56,58 +53,76 @@ namespace FICHA12.Controllers
         }
 
 
-        // POST api/values
+        // POST api/<BooksController>
         [HttpPost]
-        [ProducesResponseType(StatusCodes.Status201Created)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-
-        public IActionResult PostNewBook([FromBody] Book book)
+        public IActionResult Post([FromBody] Book book)
         {
-            if (!ModelState.IsValid)
+            if (book != null)
             {
-                return BadRequest("Not a valid book");
+                Book newBook = service.Create(book);
+                return CreatedAtRoute("GetByISBN", new { isbn = newBook.ISBN }, newBook);
             }
-            using (var ctx= new LibraryContext())
+            else
             {
-                ctx.Books.Add(new Book()
-                {
-                    ISBN = book.ISBN,
-                    Title = book.Title,
-                    Author = book.Author,
-                    Language = book.Language,
-                    Pages = book.Pages,
-                    Publisher = book.Publisher
-
-
-                });
-                ctx.SaveChanges();
-            }
-            return Ok();
-
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(string isbn, [FromBody] Book book)
-        {
-            if(book.ISBN == null)
-            {
-                newBook.ISBN = book.ISBN;
-                newBook.Title = book.Title;
-                newBook.Author = book.Author;
-                newBook.Language = book.Language;
-                newBook.Pages = book.Pages;
-                newBook.Publisher = book.Publisher;
-                return newBook;
+                return BadRequest();
             }
         }
 
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        // PUT api/<BooksController>/5
+        [HttpPut("{isbn}")]
+        public IActionResult Put(string isbn, [FromBody] Book book)
         {
-
+            var bookToUpdate = service.GetByISBN(isbn);
+            if (book is not null && bookToUpdate is not null)
+            {
+                service.Update(isbn, book);
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
         }
+
+
+        // DELETE api/<BooksController>/5
+        [HttpDelete("{isbn}")]
+        public IActionResult Delete(string isbn)
+        {
+            var book = service.GetByISBN(isbn);
+
+            if (book is not null)
+            {
+                service.DeleteByISBN(isbn);
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+        //https://localhost:7240/api/Books/978-0544003411/publisherId?publisherId=2
+        // PATCH api/<BooksController>/5
+        [HttpPatch("{isbn}/publisherId")]
+        public IActionResult Patch(string isbn, int publisherId)
+        {
+            var bookToUpdate = service.GetByISBN(isbn);
+            if (bookToUpdate is not null)
+            {
+                service.UpdatePublisher(isbn, publisherId);
+                return Ok();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+
+
+
+
+
     }
 
 	
